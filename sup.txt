@@ -1,0 +1,422 @@
+顶牛觅艺服务器ip: 120.79.107.121 , 阿里云服务器root密码: ScHiPAQ@M0          -->> data -->> appmeet
+
+//////////////////////////////////////////////////
+
+ios台湾区id:
+
+xiaolang147258@gmail.com
+Qq2443611475
+绑定手机号：17666145572
+
+ios中国地区id:
+2443611475@qq.com
+Qq147258
+
+//////////////////////////////////////////////////
+ 
+
+cd /www/wwwroot/teachers.cieo.com.cn/teacher-api
+
+git pull
+
+:q!
+
+teacher-api-update
+
+在线视频项目的服务器
+
+
+服务器
+39.108.164.131 
+
+
+root 
+
+
+Joker#163.com
+
+
+目录 先 cd .. 再 cd www/wwwroot/video/web/Classroom/
+
+
+css初始化：
+
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;} body{background:#fff;color:#333;font-size:12px; margin-top:5px;font-family:"SimSun","宋体","Arial Narrow";}  ul,ol{list-style-type:none;} select,input,img,select{vertical-align:middle;}  a{text-decoration:none;} a:link{color:#009;} a:visited{color:#800080;} a:hover,a:active,a:focus{color:#c00;text-decoration:underline;}
+
+vue项目配置：
+
+ 创建vue项目：在命令窗口输入    vue init webpack 项目名字
+ 
+ 运行vue项目：cnpm run dev 
+
+ 打包vue项目：cnpm run build
+
+ * 配置vue：config/index.js ==> 第46行改为   assetsPublicPath: './',
+   解决vue项目打包后一片空白bug    
+        
+ * ./package.json ==> 最后一段改为：  
+
+  "browserslist": [
+      "> 1%",
+      "last 5 versions",
+     "Android >= 4.0",
+     "not ie <= 8"
+  ]
+   解决vue项目打包后c3动画失效bug 
+
+ * build/utils.js 文件 在第49行下面插入：publicPath:'../../',
+   解决vue项目打包后css引入背景图片地址不正确/背景图片无法显示bug  
+}
+
+ajax请求报错解决方法：{
+
+data = JSON.stringify(data); 解决400错误 
+contentType:"application/json;charset=UTF-8"解决415错误
+
+
+vue配置服务器代理，解决axios跨域问题：
+
+     首先在config/index.js 里面找到proxyTable ：{} ，然后在里面加入：         
+      
+         "/api":{
+            target: 'http://video.cieo.com.cn',//你接口的域名
+            changeOrigin: true,
+            pathRewrite: {
+                '^/api': '/'
+            }
+        }
+     
+     然后我们可以在main.js设置一个基础路径，在main.js 设置： axios.defaults.baseURL=”/api”; 
+
+     这样你调用接口的时候可以不写域名,直接写/接口名称即可。   
+      
+==================================================================================================================================||
+git生成ssh秘钥
+
+输入   ssh-keygen -t rsa -C “email@email.com”    后按回车3下    私钥文件名 id_rsa    公钥文件名id_rsa.pub
+
+
+git上传代码到空的存储库：
+
+  git init
+
+  git add README.md
+
+  git commit -m "first commit"
+
+  git remote add origin git@47.107.58.23:root/teacher-api.git
+
+  git push -u origin master
+  
+
+  git将远程库克隆岛本地：git clone
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+宽度不固定居中：width:100%; display:inline-block;
+		 
+
+css给字符加上中划线：text-decoration:line-through;
+
+
+禁止输入框内输入空格和换行：onkeydown="if(event.keyCode==32||event.keyCode==13){return false;}"
+
+
+vue监听输入框的内容发生变化事件：@input ="inputFunc"
+
+vue监听输入框失去焦点：@blur="inp_show"
+
+判断输入框内容全部为空格：
+         
+          if(/^\s+$/gi.test(this.text_val)){
+               this.$toast({
+        	      	 	    	    message:'不能全为空格！',
+        	      	 	    	    duration:1000
+        	      	 	    	 });
+           }
+
+
+
+css旋转180度： transform: rotate(180deg)
+
+
+验证手机号正则：if(!(/^1[34578]\d{9}$/.test(iphon))){//机格式有误}
+
+
+控制微信浏览器回退按钮，跳转至指定页面: 
+                                        
+        pushHistory();
+        window.addEventListener("popstate",function(e){
+            location.href='跳转的URL';
+        });
+        function pushHistory() { 
+        var state = { 
+            title: "title", 
+            url: "#"
+        }; 
+        window.history.pushState(state, "title", "#"); 
+    }
+
+
+
+<input type="email" name="email"> 邮件键盘
+
+<input type="url" name="url"> URL键盘
+
+<input type="tel" name="tel"> 电话号码键盘
+
+<input type="number" name="number"> 数字键盘
+
+<input type="date" name="date"> 日期键盘
+
+<input type="time" name="time">时间键盘
+
+<input type="datetime" name="datetime"> 日期和时间一起
+
+<input type="month" name="month"> 月份键盘
+
+
+获取浏览器当前窗口url: window.location.href
+
+打开一个新窗口： window.open(‘链接’); 
+
+跳出for循环：break
+
+
+获取滑块距离顶部的距离：document.body.scrollTop||document.documentElement.scrollTop  
+                       取决于顶部<DOCTYPE html>||<！DOCTYPE html>
+
+页面添加滑动监听：window.addEventListener('scroll', 页面滑动需要执行的方法)   
+                   
+如果需要跳转页面必须要先去除滑动监听：window.removeEventListener('scroll', 页面滑动执行的方法)；
+
+
+css边框虚线：border:1px dashed #000;
+
+
+css设置鼠标箭头变成手指形状：cursor: pointer;
+
+
+css设置背景变透明：BACKGROUND-COLOR: transparent;
+
+      
+css设置字体颜色变透明： color:transparent
+
+
+在线设置盒子阴影网址：http://www.css88.com/tool/css3Preview/Box-Shadow.html
+
+
+字符串截取 substring（1,3）第一个参数代表开始位置,第二个参数代表结束的位置   例如：“123548”. substring（1,3） = "23"
+
+
+字符窜截取 substr(8,2) 第一个参数代表开始位置,第二个参数代表截取的长度
+
+
+删除字符窜中指定的字符(上下两种方法选其一)：.replace(new RegExp('里面写要删除的字符'), "")
+                                            .replace("里面写要删除的字符","")  
+
+
+字符串切分为数组： a .split(",")   ---》以逗号分割
+
+
+数组转字符串:  a .join()     ---》默认以逗号分隔也可以其他符号分隔-->>例如： a .join(';')
+
+
+字体水平居中：text-align:center;
+
+
+过渡动画2秒：transition: 2s;
+
+
+去除蓝色边框：outline:none;
+
+
+文本缩进：text-indent: 0.2rem;
+
+
+文本框强制换行：word-break:break-all;white-space:normal; 	
+
+
+文本-文字左右两端对齐：text-align：justify；
+
+
+禁止输入框输入：disabled="disabled"；
+
+
+rgba偏白色：background:rgba(255,255,255,0.9);
+
+
+禁止该div下面的页面滑动（蒙版适用）: @touchmove.prevent
+
+
+磨砂/毛玻璃(蒙版)效果（可直接处理图片）：filter: blur(25px);   
+
+
+div内容超出出现滚动条：overflow:scroll;
+
+
+限制背景图片大小：background-size:80px 60px;background-repeat:no-repeat;
+限制只取一张背景图：background-repeat:no-repeat;
+
+
+向右线性渐变： background-image:linear-gradient(to left, red, orange);
+
+
+指定文本第几行溢出隐藏出现省略号（需要设置宽高）： 
+		display: -webkit-box;  
+		display: -moz-box;  
+		overflow: hidden;  
+		text-overflow: ellipsis;  
+		word-break: break-all;  
+		-webkit-box-orient: vertical;  
+		-webkit-line-clamp:2;
+
+css设置字体：font-family: "";
+             黑体：SimHei
+             宋体：SimSun
+             新宋体：NSimSun
+             仿宋：FangSong
+             楷体：KaiTi
+             仿宋_GB2312：FangSong_GB2312
+             楷体_GB2312：KaiTi_GB2312
+             微軟正黑体：Microsoft JhengHei
+             微软雅黑体：Microsoft YaHei
+
+
+文本框溢出隐藏出现省略号（需要设置宽）：
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+
+
+vue 获取按下键盘回车事件 ： 
+
+    绑定标签 @keyup="alertA($event)"    
+
+    事件内容  alertA(ev){if(ev.keyCode==13){//你按下了回车按钮 }},
+
+
+
+三目运算符： a = (1 > 0) ? 'true' : 'false';
+
+
+
+让图片自适应不同分辨率展示最佳效果：max-height:100%;max-width:auto;
+				 
+                      
+让div内部图片基于自身上下左右自动居中（写在该div里面）：
+                                   vertical-align: middle;
+                                   	
+                             
+获取当前年月日星期：                      
+            
+		new Date().getFullYear();//年
+			
+			
+		new Date().getMonth()+1;//月
+		
+			
+		new Date().getDate()；//日
+			
+			
+		(new Date().getDay()==1)?'星期一':((new Date().getDay()==2)?'星期二':((new Date().getDay()==3)?'星期三':((new Date().getDay()==4)?'星期四':(new Date().getDay()==5)?"星期五":((new Date().getDay()==6)?'星期六':((new Date().getDay()==7)?'星期天':'')))))
+			             
+
+
+视口固定宽高，最佳展示图片方案：min-width:100%;min-height:100%;max-height:150%;max-width: 150%;
+
+数组去重：
+                 var a= //需要处理的数组
+             	 var res = [];//最后的结果
+                 var json = {};
+                 for(var i = 0; i < a.length; i++){
+                    if(!json[a[i].artId]){
+                       res.push(a[i]);
+                          json[a[i].artId] = 1;
+                      }
+                   }
+
+@mouseover='xxx' ：鼠标悬浮事件 
+
+@mouseout=‘xxx’：鼠标离开事件	
+
+
+css上下循环运动(也可以设置成左右运动)：
+
+   @-webkit-keyframes myfirst 
+         {
+             0%  {background: red; left:0px; top:500px;}
+            25%  {background: yellow;}
+            50%  {background: blue;}
+            75%  {background: green;}
+            100% {background: red; left:0px; top:0px;}
+         }	 
+   div{
+           position:relative;
+           -webkit-animation: myfirst 3s linear 3s infinite alternate;
+         } 
+
+
+css无限滚动动画：
+       
+    div{ 
+         position:absolute;
+         left: 800px;
+         background: red;
+                	
+-webkit-transition-property: -webkit-transform;  
+
+-webkit-transition-duration: 5s;  
+
+-moz-transition-property: -moz-transform;  
+
+-moz-transition-duration: 5s;  
+
+-webkit-animation: rotate 0.5s linear infinite;  
+
+-moz-animation: rotate 0.5s linear infinite;  
+
+-o-animation: rotate 0.5s linear infinite;  
+
+animation: rotate :0.5s linear infinite;}
+
+@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)} to{-webkit-transform: rotate(360deg)}}
+
+@-moz-keyframes rotate{from{-moz-transform: rotate(0deg)} to{-moz-transform: rotate(359deg)}}
+
+@-o-keyframes rotate{from{-o-transform: rotate(0deg)} to{-o-transform: rotate(359deg)}}
+
+@keyframes rotate{from{transform: rotate(0deg)} to{transform: rotate(359deg)}}
+       
+
+vue-cil脚手架监听浏览器后退按钮（微信浏览器测试可用）：
+
+           pushHistory();  
+            var bool=false;  
+            setTimeout(function(){  
+                  bool=true;  
+            },1500);  
+            window.addEventListener("popstate", (e)=> {  
+              if(bool){ 
+                     //做自己想做的事情
+                }  
+                pushHistory();  
+            }, false);  
+           function pushHistory() {  
+            var state = {  
+                title: "title", 
+                url: "#"  
+            };  
+            window.history.pushState(state, "title", "#");  
+        }          
+
+
+
+
+
+
+
+
+
+	
