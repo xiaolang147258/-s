@@ -13,7 +13,14 @@ ios中国地区id:
 Qq147258
 
 //////////////////////////////////////////////////
- 
+
+幼儿园服务器：
+47.107.58.23
+root
+Joker#163.com
+
+
+教师端服务器目录
 
 cd /www/wwwroot/teachers.cieo.com.cn/teacher-api
 
@@ -21,7 +28,7 @@ git pull
 
 :q!
 
-teacher-api-update
+
 
 在线视频项目的服务器
 
@@ -36,7 +43,7 @@ root
 Joker#163.com
 
 
-目录 先 cd .. 再 cd www/wwwroot/video/web/Classroom/
+目录 cd /www/wwwroot/new/Classroom/
 
 
 css初始化：
@@ -120,8 +127,46 @@ git上传代码到空的存储库：
 
   git将远程库克隆岛本地：git clone
 
+
+修改远程仓库地址：
+
+  git remote -v
+ 查看当前的远程仓库
+
+
+
+  git remote set-url origin https://where you want to put your repository to.git
+ 修改为想要设置的远程仓库
+
+
+
+  git remote -v
+ 验证一下
+
+
+
 --------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+flex动态布局，左右两端自动对齐，写在父元素中：
+
+                 display:-webkit-flex; 
+                 display:flex;
+		 flex-direction:row;
+		 flex-wrap:wrap;
+		 justify-content:space-between;
+
+
+
+将当前网页缩放至100%：document.getElementsByTagName('body')[0].style.zoom=1
+
+调起拨打电话a标签写法：<a href="tel:手机号码" ></a>
+
 
 宽度不固定居中：width:100%; display:inline-block;
 		 
@@ -207,7 +252,7 @@ css边框虚线：border:1px dashed #000;
 css设置鼠标箭头变成手指形状：cursor: pointer;
 
 
-css设置背景变透明：BACKGROUND-COLOR: transparent;
+css设置背景变透明：BACKGROUND-COLOR: transparent;opacity:0;
 
       
 css设置字体颜色变透明： color:transparent
