@@ -2,6 +2,9 @@
 
 //////////////////////////////////////////////////
 
+MEGA网盘恢复秘钥：GPEZQQ9-PRAJCFeDienjhw
+
+
 ios台湾区id:
 
 xiaolang147258@gmail.com
@@ -45,6 +48,36 @@ Joker#163.com
 
 目录 cd /www/wwwroot/new/Classroom/
 
+
+枫叶杯服务器：
+
+服务器
+39.108.164.131
+root
+Joker#163.com
+
+目录：/www/wwwroot/videoVote/web/wechat/public
+
+
+
+运营中心测试服务器目录 ：
+
+   /www/wwwroot/operate_web/OperateCenterWeb
+
+   47.112.138.229   
+root
+   !QAZ2wsx
+
+http://47.112.138.229:7039/
+
+
+运营中心切换开发git分支操作 ：
+
+   git checkout developer
+   
+
+
+、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
 
 css初始化：
 
@@ -144,16 +177,24 @@ git上传代码到空的存储库：
  验证一下
 
 
+git本地代码强制覆盖远程库：git push origin 分支名 --force
+
+
+git查看远程分支 git branch -a
+
+git切换分支 git checkout 分支名字
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------
 
+inpit输入款从右往左输入：direction: rtl;
 
 
+防止文本内容溢出：word-break:break-all;white-space:normal
 
 
-
-flex动态布局，左右两端自动对齐，写在父元素中：
+flex弹性布局，左右两端自动对齐，写在父元素中：
 
                  display:-webkit-flex; 
                  display:flex;
@@ -292,7 +333,7 @@ css设置字体颜色变透明： color:transparent
 文本框强制换行：word-break:break-all;white-space:normal; 	
 
 
-文本-文字左右两端对齐：text-align：justify；
+文本-文字左右两端对齐：text-align:justify;
 
 
 禁止输入框输入：disabled="disabled"；
