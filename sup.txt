@@ -2,6 +2,22 @@
 
 //////////////////////////////////////////////////
 
+
+nodejs（在线课程）练习线上文件存放目录：www/wwwroot/new/poster-brand/laravel55/public/node
+域名：http://poster-brand.cieo.com.cn
+
+
+腾讯云ip:129.204.194.147
+密码：xiaolang147258
+
+
+腾讯云服务器宝塔面板地址：
+Bt-Panel: http://129.204.194.147:8889/9ee710f2
+username: xjmugybm
+password: 2c663c5a
+
+
+
 MEGA网盘恢复秘钥：GPEZQQ9-PRAJCFeDienjhw
 
 Joker#163.com
